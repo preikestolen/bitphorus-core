@@ -15,5 +15,6 @@ app.get("/", function(req, res) {
 });
 
 app.post("/", function(req, res) {
-
+    const bodyy = req;
+    console.log(bodyy);
 });
