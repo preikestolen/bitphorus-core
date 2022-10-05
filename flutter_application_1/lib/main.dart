@@ -53,7 +53,7 @@ class MyCustomFormState extends State<MyCustomForm> {
             // The validator receives the text that the user has entered.
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter some text';
+                return 'Enter 100 dollars';
               }
               return null;
             },
@@ -67,7 +67,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                   // If the form is valid, display a snackbar. In the real world,
                   // you'd often call a server or save the information in a database.
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Processing Data')),
+                    const SnackBar(content: Text('Buying Bitcoin')),
                   );
                 }
               },
