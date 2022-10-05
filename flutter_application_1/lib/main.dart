@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const appTitle = 'Form Validation Penis';
+    const appTitle = 'Bitphorus';
 
     return MaterialApp(
       title: appTitle,
