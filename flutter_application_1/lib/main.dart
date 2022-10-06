@@ -6,12 +6,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-postData(String amount) async{
+postData(String amount) async {
   // ignore: unused_local_variable
-  var response = await http.post(
-    Uri.parse("http://localhost:3000/"),
-    body: {"amount": amount});
-
+  var response = await http
+      .post(Uri.parse("http://192.168.1.58:3000"), body: {"amount": amount});
 }
 
 void main() {
@@ -42,10 +40,9 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Bitphorus P2P Bitcoin Exchange'),
         ),
         body: Container(
-          alignment: Alignment.center,
-          padding: const EdgeInsets.all(8.0),
-          child: buildColumn()
-        ),
+            alignment: Alignment.center,
+            padding: const EdgeInsets.all(8.0),
+            child: buildColumn()),
       ),
     );
   }
@@ -56,7 +53,8 @@ class _MyAppState extends State<MyApp> {
       children: <Widget>[
         TextField(
           controller: _controller,
-          decoration: const InputDecoration(hintText: 'Enter the amount of BTC you want to buy.'),
+          decoration: const InputDecoration(
+              hintText: 'Enter the amount of BTC you want to buy.'),
         ),
         ElevatedButton(
           onPressed: () {
