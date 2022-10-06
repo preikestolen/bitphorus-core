@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'dart:async';
 import 'dart:convert';
 
@@ -10,22 +12,6 @@ postData(String amount) async{
     Uri.parse("http://localhost:3000/"),
     body: {"amount": amount});
 
-}
-
-
-
-class Album {
-  final int id;
-  final String title;
-
-  const Album({required this.id, required this.title});
-
-  factory Album.fromJson(Map<String, dynamic> json) {
-    return Album(
-      id: json['id'],
-      title: json['title'],
-    );
-  }
 }
 
 void main() {
@@ -43,7 +29,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   final TextEditingController _controller = TextEditingController();
-  Future<Album>? _futureAlbum;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +44,7 @@ class _MyAppState extends State<MyApp> {
         body: Container(
           alignment: Alignment.center,
           padding: const EdgeInsets.all(8.0),
-          child: (_futureAlbum == null) ? buildColumn() : buildFutureBuilder(),
+          child: buildColumn()
         ),
       ),
     );
@@ -82,21 +67,6 @@ class _MyAppState extends State<MyApp> {
           child: const Text('Buy Bitcoin!'),
         ),
       ],
-    );
-  }
-
-  FutureBuilder<Album> buildFutureBuilder() {
-    return FutureBuilder<Album>(
-      future: _futureAlbum,
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          return Text(snapshot.data!.title);
-        } else if (snapshot.hasError) {
-          return Text('${snapshot.error}');
-        }
-
-        return const CircularProgressIndicator();
-      },
     );
   }
 }
