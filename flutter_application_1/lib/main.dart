@@ -9,7 +9,7 @@ import 'package:http/http.dart' as http;
 postData(String amount) async {
   // ignore: unused_local_variable
   var response = await http
-      .post(Uri.parse("http://192.168.1.58:3000"), body: {"amount": amount});
+      .post(Uri.parse("http://127.0.0.1:3000"), body: {"amount": amount});
 }
 
 void main() {
@@ -39,6 +39,18 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Bitphorus P2P Bitcoin Exchange'),
         ),
+            bottomNavigationBar: BottomNavigationBar(
+              items: const <BottomNavigationBarItem>[
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.home),
+                  label: "Home",
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.account_balance),
+                  label: "Account",
+                ),    
+              ],
+            ),
         body: Container(
             alignment: Alignment.center,
             padding: const EdgeInsets.all(8.0),
