@@ -8,6 +8,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
 
+var orders = [];
+
 app.listen(process.env.PORT || port, function() {
     console.log("server is listening the port");
 });
@@ -18,6 +20,12 @@ app.get("/", function(req, res) {
 
 app.post("/", function(req, res) {
     const bodyy = req.body;
-    console.log(bodyy);
-    res.render(__dirname + "/views/home.ejs", {});
+    // console.log(bodyy.amount);
+    orders.push(bodyy.amount);
+    res.redirect("/");
+    // res.render(__dirname + "/views/home.ejs", {amount: bodyy.amount});
+});
+
+app.get("/orders", function(req, res) {
+    res.render(__dirname + "/views/orders.ejs", {items: orders});
 });

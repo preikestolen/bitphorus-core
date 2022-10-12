@@ -1,0 +1,8 @@
+<%- include("partials/header.ejs") %>
+<%for(var i = 0; i < items.length; i++) {%>
+  <div class="item">
+    <input type="checkbox">
+    <p><%= items[i] %></p>
+  </div>
+  <%}%>
+<%- include("partials/footer.ejs") %>
