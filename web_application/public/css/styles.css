@@ -18,3 +18,48 @@ body {
 .navbar-brand {
   font-size: 2rem;
 }
+
+.order-header-id {
+  display: inline;
+  margin: 0 1%;
+}
+
+.order-header-amount {
+  display: inline;
+  margin: 0 2%;
+}
+
+.order-header {
+  margin: 1% 2%;
+}
+
+.order-items {
+  margin: 2%;
+}
+
+.order-id {
+  display: inline-block;
+  margin: 1%;
+  font-size: 1.5rem;
+}
+
+.order-amount {
+  display: inline-block;
+  margin: 1%;
+  font-size: 1.5rem;
+  /* top-bottom left-right */
+}
+
+.order-checkbox {
+  /* display: block; */
+  float: right;
+  transform : scale(3);
+  margin: 2%;
+  /* margin: 2%; */
+}
+
+.order-divider {
+  border-top: 6px solid;
+  border-color: rgb(77, 77, 78);
+  /* margin: 2%; */
+}
