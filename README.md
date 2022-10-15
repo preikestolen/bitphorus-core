@@ -15,5 +15,3 @@ In Mac, you can use localhost or 127.0.0.1
 This problem only occurs in Windows with Android Studio.
 Windows or Android Studio does not allow you to choose localhost as your API since it finds it insecure.
 That's why we had to use our LAN address (Our IP address in our local area network).
-
-AYBERK GAYY!!!!!!!
