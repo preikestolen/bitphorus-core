@@ -19,6 +19,13 @@ body {
   font-size: 2rem;
 }
 
+.order-header-wrapper {
+  border-style: solid;
+  border-width: 0.2rem;
+  border-right-width: 0;
+  margin: 0;
+}
+
 .order-header-id {
   display: inline;
   margin: 0 1%;
@@ -26,26 +33,46 @@ body {
 
 .order-header-amount {
   display: inline;
-  margin: 0 2%;
+  margin: 0 3%;
 }
 
 .order-header {
-  margin: 1% 2%;
+  /* margin: 1% 2%; */
+  /* display: inline-block; */
 }
 
+.market-divider-wrapper {
+  border-style: solid;
+  border-width: 0.2rem;
+  margin: 0;
+}
+
+.markets-divider {
+  /* display: inline-block; */
+  /* flex-direction: column; */
+  /* -webkit-box-orient: vertical; */
+}
+
+.market-ticker-btc {
+  display: inline-block;
+}
+
+#btc-price-usd {
+  /* display: inline-block; */
+}
 .order-items {
-  margin: 2%;
+  margin: 1% 0;
 }
 
 .order-id {
   display: inline-block;
-  margin: 1%;
+  margin: 0 1%;
   font-size: 1.5rem;
 }
 
 .order-amount {
   display: inline-block;
-  margin: 1%;
+  margin: 0 2%;
   font-size: 1.5rem;
   /* top-bottom left-right */
 }
@@ -53,13 +80,12 @@ body {
 .order-checkbox {
   /* display: block; */
   float: right;
-  transform : scale(3);
-  margin: 2%;
-  /* margin: 2%; */
+  zoom: 2.9;
+  margin: auto 0%;
 }
 
 .order-divider {
   border-top: 6px solid;
   border-color: rgb(77, 77, 78);
-  /* margin: 2%; */
+  margin: 1% 0;
 }
