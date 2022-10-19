@@ -53,11 +53,11 @@ body {
   /* -webkit-box-orient: vertical; */
 }
 
-.market-ticker-btc {
+.market-prices {
   display: inline-block;
 }
 
-#btc-price-usd {
+.currency-names {
   display: inline-block;
 }
 .order-items {
