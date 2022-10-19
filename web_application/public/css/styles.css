@@ -48,7 +48,7 @@ body {
 }
 
 .markets-divider {
-  /* display: inline-block; */
+  display: inline-block;
   /* flex-direction: column; */
   /* -webkit-box-orient: vertical; */
 }
@@ -58,7 +58,7 @@ body {
 }
 
 #btc-price-usd {
-  /* display: inline-block; */
+  display: inline-block;
 }
 .order-items {
   margin: 1% 0;
