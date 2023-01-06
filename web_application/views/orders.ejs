@@ -6,12 +6,14 @@
     <div class="order-header">
       <p class="order-header-id">ID</p>
       <p class="order-header-amount">Amount</p>
+      <p class="order-header-wallet">Wallet Address</p>
       <hr class="rounded order-divider">
     </div>
-    <%for(var i = 0; i < items.length; i++) {%>
+    <%for(var i = 0; i < items.length-1; i+=2) {%>
       <div class="order-items">
         <p class="order-id"><%= i+1 %></p>
         <p class="order-amount"><%= items[i] %> BTC</p>
+        <p class="order-address"><%= items[i+1] %> </p>
         <input type="checkbox" class="order-checkbox">
       </div>
       <hr class="rounded order-divider">

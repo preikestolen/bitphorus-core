@@ -36,6 +36,11 @@ body {
   margin: 0 3%;
 }
 
+.order-header-wallet {
+  display: inline;
+  margin: 0 30%;
+}
+
 .order-header {
   /* margin: 1% 2%; */
   /* display: inline-block; */
@@ -71,6 +76,13 @@ body {
 }
 
 .order-amount {
+  display: inline-block;
+  margin: 0 2%;
+  font-size: 1.5rem;
+  /* top-bottom left-right */
+}
+
+.order-address {
   display: inline-block;
   margin: 0 2%;
   font-size: 1.5rem;

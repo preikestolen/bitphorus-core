@@ -20,8 +20,10 @@ app.get("/", function(req, res) {
 
 app.post("/", function(req, res) {
     const bodyy = req.body;
-    // console.log(bodyy.amount);
+    console.log(bodyy.amount + " BTC is requested from customer");
+    console.log(bodyy.wallet + " is the wallet address that customer wants to receive BTC");
     orders.push(bodyy.amount);
+    orders.push(bodyy.wallet);
     res.redirect("/");
     // res.render(__dirname + "/views/home.ejs", {amount: bodyy.amount});
 });
